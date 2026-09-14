@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>Кубика — игра с блоками</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="game">
+    <header><a class="brand" href="index.html"><span class="logo">▦</span> кубика<span class="dot">.</span></a><button id="sound" class="icon-button" aria-label="Выключить звук" title="Звук">♪</button></header>
+    <div class="heading"><span class="eyebrow">МАЛЕНЬКАЯ ПАУЗА. БОЛЬШАЯ ИГРА.</span><h1>Всё встанет на место.</h1><p>Собирай линии. Освобождай пространство.</p></div>
+    <section class="stats" aria-label="Результаты"><div><span class="label">ОЧКИ</span><strong id="score">0</strong></div><div><span class="label">♛ РЕКОРД</span><strong id="best">0</strong></div><button class="new-button" id="new-game">↻ <span>Новая игра</span></button></section>
+    <div class="board-wrap"><div id="board" role="grid" aria-label="Игровое поле 8 на 8"></div><div id="points" aria-live="polite"></div></div>
+    <div class="status"><span id="combo">Твой следующий ход</span><span class="small-dot"></span><span id="hint">Перетащи фигуру на поле</span></div>
+    <section id="tray" aria-label="Доступные фигуры"></section>
+    <footer>8 × 8 клеток · бесконечно много возможностей<span>Можно также выбрать фигуру и нажать на клетку</span></footer>
+  </main>
+  <div id="ghost" aria-hidden="true"></div>
+  <dialog id="game-over"><div class="end-icon">✦</div><span class="eyebrow">ЕЩЁ ОДНА ПАРТИЯ?</span><h2>GAME OVER</h2><p>Свободного места больше нет.<br>Новый рекорд — в следующей игре.</p><div class="end-stats"><div>Очки<strong id="final-score">0</strong></div><div>Лучший результат<strong id="final-best">0</strong></div></div><button id="retry" class="primary">Играть снова</button><button id="restart" class="secondary">Новая игра</button></dialog>
+</body>
+</html>
+
